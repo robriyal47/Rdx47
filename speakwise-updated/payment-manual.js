@@ -64,19 +64,32 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
   </article>
 `).join("");
 
-const whatsappMessage = [
-  "Hello SpeakWise Team,",
-  "",
-  "I have completed my course payment.",
-  "",
-  `Course: ${selectedPlan.name}`,
-  `Amount Paid: ${formattedAmount}`,
-  "",
-  "Student Name:",
-  "",
-  "I am Sharing the payment receipt for verification.",
-  "Kindly confirm my enrollment and share batch details once I share my payment receipt."
-].join("\n");
+document.querySelector("[data-whatsapp-link]").addEventListener("click", (e) => {
 
-document.querySelector("[data-whatsapp-link]").href =
-  `https://wa.me/${PAYMENT_CONFIG.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  const studentName =
+    document.getElementById("student-name").value.trim();
+
+  if (!studentName) {
+    e.preventDefault();
+    alert("Please enter your name before continuing.");
+    return;
+  }
+
+  const whatsappMessage = [
+    "Hello SpeakWise Team,",
+    "",
+    "I have completed my course payment.",
+    "",
+    `Student Name: ${studentName}`,
+    `Course: ${selectedPlan.name}`,
+    `Amount Paid: ${formattedAmount}`,
+    "",
+    "Transaction ID:",
+    "",
+    "I have attached the payment receipt/screenshot.",
+    "Kindly confirm my enrollment and share batch details."
+  ].join("\n");
+
+  e.currentTarget.href =
+    `https://wa.me/${PAYMENT_CONFIG.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+});
