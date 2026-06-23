@@ -65,11 +65,11 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
 `).join("");
 
 const upiUrl =
-  `upi://pay?pa=${primaryUpi.id}` +
-  `&pn=${PAYMENT_CONFIG.payeeName}` +
+  `upi://pay?pa=${encodeURIComponent(primaryUpi.id)}` +
+  `&pn=${encodeURIComponent(PAYMENT_CONFIG.payeeName)}` +
   `&am=${selectedPlan.amount}` +
   `&cu=INR` +
-  `&tn=${selectedPlan.name}`;
+  `&tn=${encodeURIComponent(selectedPlan.name)}`;
 
 document.querySelector("[data-upi-link]").href = upiUrl;
 
