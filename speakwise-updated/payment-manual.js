@@ -74,8 +74,8 @@ const whatsappMessage = [
   "",
   "Student Name:",
   "",
-  "I have attached the payment receipt for verification.",
-  "Kindly confirm my enrollment and share batch details."
+  "I am Sharing the payment receipt for verification.",
+  "Kindly confirm my enrollment and share batch details once I share my payment receipt."
 ].join("\n");
 
 document.querySelector("[data-whatsapp-link]").href =
