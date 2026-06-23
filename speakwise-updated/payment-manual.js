@@ -1,5 +1,5 @@
 const PAYMENT_CONFIG = {
-  payeeName: "Nirmal Sharma",
+  payeeName: "NIRMAL SHARMA",
   whatsappNumber: "919599312019",
   upiOptions: [
     {
@@ -66,7 +66,7 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
 
 const upiUrl =
   `upi://pay?pa=${primaryUpi.id}` +
-  `&pn=Nirmal_Sharma` +
+  `&pn=NIRMAL SHARMA` +
   `&am=${selectedPlan.amount}` +
   `&cu=INR` +
   `&tn=${selectedPlan.name}`;
