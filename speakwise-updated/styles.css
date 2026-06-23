@@ -1119,3 +1119,10 @@ select:focus {
     display: none;
   }
 }
+.button,
+.plan-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
