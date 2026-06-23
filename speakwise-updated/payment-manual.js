@@ -1,5 +1,5 @@
 const PAYMENT_CONFIG = {
-  payeeName: "SpeakWise",
+  payeeName: "Nirmal Sharma",
   whatsappNumber: "919599312019",
   upiOptions: [
     {
@@ -64,15 +64,14 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
   </article>
 `).join("");
 
-const upiParams = new URLSearchParams({
-  pa: primaryUpi.id,
-  pn: PAYMENT_CONFIG.payeeName,
-  am: String(selectedPlan.amount),
-  cu: "INR",
-  tn: `${selectedPlan.name} - SpeakWise`
-});
+const upiUrl =
+  `upi://pay?pa=${primaryUpi.id}` +
+  `&pn=${PAYMENT_CONFIG.payeeName}` +
+  `&am=${selectedPlan.amount}` +
+  `&cu=INR` +
+  `&tn=${selectedPlan.name}`;
 
-document.querySelector("[data-upi-link]").href = `upi://pay?${upiParams.toString()}`;
+document.querySelector("[data-upi-link]").href = upiUrl;
 
 const whatsappMessage = [
   "Hello SpeakWise, I have completed my UPI payment.",
