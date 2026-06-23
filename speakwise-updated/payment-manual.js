@@ -65,13 +65,17 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
 `).join("");
 
 const whatsappMessage = [
-  "Hello SpeakWise, I have completed my UPI payment.",
+  "Hello SpeakWise Team,",
+  "",
+  "I have completed my course payment.",
   "",
   `Course: ${selectedPlan.name}`,
-  `Amount: ${formattedAmount}`,
-  `UPI ID used: ${primaryUpi.id}`,
-  "Name:",
-  "Transaction ID:"
+  `Amount Paid: ${formattedAmount}`,
+  "",
+  "Student Name:",
+  "",
+  "I have attached the payment receipt for verification.",
+  "Kindly confirm my enrollment and share batch details."
 ].join("\n");
 
 document.querySelector("[data-whatsapp-link]").href =
