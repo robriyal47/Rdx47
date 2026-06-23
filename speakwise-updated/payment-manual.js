@@ -64,15 +64,6 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
   </article>
 `).join("");
 
-const upiUrl =
-  `upi://pay?pa=${primaryUpi.id}` +
-  `&pn=NIRMAL SHARMA` +
-  `&am=${selectedPlan.amount}` +
-  `&cu=INR` +
-  `&tn=${selectedPlan.name}`;
-
-document.querySelector("[data-upi-link]").href = upiUrl;
-
 const whatsappMessage = [
   "Hello SpeakWise, I have completed my UPI payment.",
   "",
