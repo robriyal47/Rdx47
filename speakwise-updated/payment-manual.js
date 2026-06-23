@@ -66,7 +66,7 @@ upiOptions.innerHTML = PAYMENT_CONFIG.upiOptions.map((option) => `
 
 const upiUrl =
   `upi://pay?pa=${primaryUpi.id}` +
-  `&pn=NIRMAL SHARMA` +
+  `&pn=NIRMALSHARMA` +
   `&am=${selectedPlan.amount}` +
   `&cu=INR` +
   `&tn=${selectedPlan.name}`;
