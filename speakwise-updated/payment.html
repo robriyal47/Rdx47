@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPI Payment | SpeakWise</title>
+    <meta
+      name="description"
+      content="Complete your SpeakWise course payment using UPI and confirm enrollment on WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="payment-page">
+    <header class="site-header payment-header is-scrolled">
+      <a class="brand" href="./index.html#top" aria-label="SpeakWise home">
+        <span class="brand-mark">SW</span>
+        <span>SpeakWise</span>
+      </a>
+      <nav class="nav-links" aria-label="Payment navigation">
+        <a href="./index.html#plans">Courses</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="./index.html#plans">Change Course</a>
+    </header>
+
+    <main class="payment-shell upi-shell">
+      <section class="payment-card upi-card">
+        <div class="payment-summary">
+          <p class="eyebrow dark">UPI payment</p>
+          <h1>Complete your enrollment.</h1>
+          <p>
+            Pay the selected course fee using any UPI app. After payment, send
+            the screenshot or transaction ID on WhatsApp so our team can confirm
+            your batch.
+          </p>
+
+          <div class="selected-plan">
+            <span>Selected course</span>
+            <strong data-plan-name>SpeakWise Course</strong>
+            <p data-plan-price>Amount will appear here.</p>
+          </div>
+        </div>
+
+        <div class="payment-form upi-panel">
+          <div class="upi-options" data-upi-options></div>
+
+          <dl class="upi-details">
+            <div>
+              <dt>Payee</dt>
+              <dd data-payee-name>SpeakWise</dd>
+            </div>
+            <div>
+              <dt>Amount</dt>
+              <dd data-upi-amount>₹0</dd>
+            </div>
+          </dl>
+
+          <a class="button primary" data-upi-link href="#">Pay with UPI App</a>
+          <a class="button plan-button" data-whatsapp-link href="#" target="_blank" rel="noopener">
+            Send Payment Proof on WhatsApp
+          </a>
+          <p class="form-note">
+            Please include your full name, selected course, paid amount, and transaction ID.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="payment-manual.js"></script>
+  </body>
+</html>

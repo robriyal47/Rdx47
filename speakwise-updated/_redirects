@@ -1,0 +1,2 @@
+/payment /payment.html 200
+/payment/* /payment.html 200
