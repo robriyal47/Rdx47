@@ -1,5 +1,5 @@
 const PAYMENT_CONFIG = {
-  payeeName: "Nirmal_Sharma",
+  payeeName: "NirmalSharma",
   whatsappNumber: "919599312019",
   upiOptions: [
     {
